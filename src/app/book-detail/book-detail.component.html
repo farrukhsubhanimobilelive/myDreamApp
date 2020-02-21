@@ -1,0 +1,11 @@
+<div class="book" *ngIf="bookDetail">
+  <h1>Book Detail Component</h1>
+  <h2>{{ bookDetail.bookTitle }}</h2>
+  <h3>{{ bookDetail.bookBy }}</h3>
+  <div class="subjects">
+    <p>{{ bookDetail.bookSubjects | slice: 0: 150 }}</p>
+  </div>
+  <div class="description">
+    <p>{{ bookDetail.bookDescription | slice: 0: 200 }}</p>
+  </div>
+</div>

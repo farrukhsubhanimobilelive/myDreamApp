@@ -1,0 +1,14 @@
+<div class="booklist" style="max-width: 1024px; margin: 0 auto; overflow: hidden;">
+  <div class="book" style="padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid #ccc;" *ngFor="let book of books">
+    <h2>{{ book.bookTitle }}</h2>
+    <h3>{{ book.bookBy }}</h3>
+    <div class="subjects">
+      <p>{{ book.bookSubjects | slice: 0: 150 }}</p>
+    </div>
+    <div class="description">
+      <p>{{ book.bookDescription | slice: 0: 200 }}</p>
+    </div>
+    <button type="button" (click)="onClick(book)">click</button>
+  </div>
+  <app-book-detail [bookDetail]="selectedBook"></app-book-detail>
+</div>
